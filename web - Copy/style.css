@@ -1,0 +1,336 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  color: white;
+  -webkit-tap-highlight-color: transparent; /* Makes mobile tapping cleaner */
+}
+
+/* HEADER WITH RESET BUTTON */
+header {
+  padding: 40px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  margin: 0 0 5px 0;
+}
+
+header p {
+  font-size: 16px;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+/* BUTTONS */
+.primaryBtn {
+  background: #6366f1;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.primaryBtn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.resetBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.resetBtn:hover {
+  background: #7f1d1d;
+  color: white;
+  border-color: #ef4444;
+}
+
+/* MAIN CONTAINER & ROWS */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 20px 60px;
+}
+
+/* Panels */
+.panel {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* --- ROW 1: TOP BAR --- */
+.topBar {
+  display: flex;
+  gap: 20px;
+}
+
+.statCard {
+  flex: 1;
+  text-align: center;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statCard h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #e2e8f0;
+}
+
+.statCard p {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* --- ROW 2: MIDDLE BAR --- */
+.middleBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.inputSection {
+  flex: 1;
+  min-width: 200px;
+}
+
+.inputSection h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #cbd5e1;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 8px;
+}
+
+.creditRow {
+  display: flex;
+  gap: 15px;
+}
+
+.inputGroup {
+  flex: 1;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  font-size: 16px;
+}
+
+.checkboxGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.03);
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 15px;
+}
+
+.checkItem:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* --- ROW 3: BOTTOM SPLIT --- */
+.bottomSplit {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  gap: 25px;
+}
+
+.warningPanel h2, .goalsPanel h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #e2e8f0;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 10px;
+}
+
+/* Warnings */
+.warningCard {
+  background: #7f1d1d; 
+  color: #fca5a5;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.warningCard.medium {
+  background: #9a3412; 
+  color: #fdba74;
+}
+
+.noWarningsPlaceholder {
+  color: #64748b;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Goals */
+.goalControls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  flex: 1;
+  font-size: 15px;
+}
+
+.goalCard {
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.2s, background-color 0.4s ease;
+  position: relative;
+}
+
+.goalCard:hover {
+  transform: translateY(-2px);
+}
+
+.goalHeader {
+  margin-bottom: 10px;
+  padding-right: 80px; /* Space for remove button */
+}
+
+/* New Link Button Styles */
+.infoLink {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.infoLink:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.removeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.removeBtn:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+/* Progress bar */
+.progressBar {
+  height: 8px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+  margin: 15px 0 5px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+/* --- DYNAMIC STATUS COLORS --- */
+.bg-green { background-color: #166534 !important; }
+.bg-orange { background-color: #9a3412 !important; }
+.bg-red { background-color: #7f1d1d !important; }
+.bg-default { background-color: #1e293b !important; }
+
+/* Responsive */
+@media(max-width: 900px) {
+  .bottomSplit { grid-template-columns: 1fr; }
+  .middleBar { flex-wrap: wrap; }
+  .inputSection { flex: 1 1 45%; }
+}
+@media(max-width: 650px) {
+  .header-content { flex-direction: column; text-align: center; align-items: center; }
+  .topBar { flex-direction: column; }
+  .middleBar { flex-direction: column; gap: 20px; }
+  .inputSection { flex: 1 1 100%; }
+  .creditRow { flex-direction: column; }
+  .goalControls { flex-direction: column; }
+}

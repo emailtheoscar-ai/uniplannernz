@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <title>NCEA Rank Score Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div>
+      <h1>NCEA Rank Score Planner</h1>
+      <p>Plan your pathway to New Zealand universities</p>
+    </div>
+    <button id="resetBtn" class="resetBtn">↻ Start Over</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="row topBar">
+    <div class="statCard bg-default" id="rankScoreCard">
+      <h3>Rank Score</h3>
+      <p id="rankScore">0</p>
+      <span>/ 320</span>
+    </div>
+    <div class="statCard bg-red" id="ueLitCard">
+      <h3>UE Literacy</h3>
+    </div>
+    <div class="statCard bg-red" id="ueNumCard">
+      <h3>UE Numeracy</h3>
+    </div>
+  </section>
+
+  <section class="row middleBar panel">
+    <div class="inputSection creditsSection">
+      <h3>NCEA Credits</h3>
+      <div class="creditRow">
+        <div class="inputGroup">
+          <label>Excellence</label>
+          <input id="excellence" type="number" min="0" value="0">
+        </div>
+        <div class="inputGroup">
+          <label>Merit</label>
+          <input id="merit" type="number" min="0" value="0">
+        </div>
+        <div class="inputGroup">
+          <label>Achieved</label>
+          <input id="achieved" type="number" min="0" value="0">
+        </div>
+      </div>
+    </div>
+
+    <div class="inputSection checksSection">
+      <h3>University Entrance</h3>
+      <div class="checkboxGrid">
+        <label class="checkItem"><input type="checkbox" id="ueReading"><span>Literacy — Reading</span></label>
+        <label class="checkItem"><input type="checkbox" id="ueWriting"><span>Literacy — Writing</span></label>
+        <label class="checkItem"><input type="checkbox" id="ueNumeracy"><span>Numeracy</span></label>
+      </div>
+    </div>
+
+    <div class="inputSection checksSection">
+      <h3>Subjects Taken</h3>
+      <div class="checkboxGrid">
+        <label class="checkItem"><input type="checkbox" id="subCalc"><span>Calculus</span></label>
+        <label class="checkItem"><input type="checkbox" id="subPhysics"><span>Physics</span></label>
+        <label class="checkItem"><input type="checkbox" id="subChem"><span>Chemistry</span></label>
+        <label class="checkItem"><input type="checkbox" id="subBio"><span>Biology</span></label>
+        <label class="checkItem"><input type="checkbox" id="subStats"><span>Statistics</span></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="row bottomSplit">
+    <div class="panel warningPanel">
+      <h2>Warnings & Suggestions</h2>
+      <div id="warningList">
+        <p class="noWarningsPlaceholder">No warnings currently. Keep up the good work!</p>
+      </div>
+    </div>
+
+    <div class="panel goalsPanel">
+      <h2>University Goals</h2>
+      <div class="goalControls">
+        <select id="universitySelect"></select>
+        <select id="degreeSelect"></select>
+        <button id="addGoalBtn" class="primaryBtn">Add Goal</button>
+      </div>
+      <div id="goalList"></div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
